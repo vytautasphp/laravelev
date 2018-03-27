@@ -288,12 +288,17 @@ route::get('/', function () {
 //     echo $tag->name;
 // });
 
-route::get('/tag/post', function(){
+// route::get('/tag/post', function(){
 
-    $tag = Tag::find(2);
-    foreach($tag->posts as $post){
+//     $tag = Tag::find(2);
+//     foreach($tag->posts as $post){
 
-        echo $post->title;
-    }
+//         echo $post->title;
+//     }
 
-});
+// });
+//-------CRUD Application-------//
+
+
+
+Route::resource('/posts', 'PostsController');
